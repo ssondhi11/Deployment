@@ -9,15 +9,15 @@ template_env = jinja2.Environment(loader=template_loader)
 template = template_env.get_template(template_file)
 
 # Define variables from Jenkins environment
-deployment_name = ${DEPLOYMENT_NAME}
-replica_count = ${REPLICA_COUNT}
-app_name = ${APP_NAME}
-container_name = ${CONTAINER_NAME}
-docker_image = ${DOCKER_IMAGE}
-image_tag = ${IMAGE_TAG}
-container_port =  ${CONTAINER_PORT}
-env_variable_name = ${ENV_VARIABLE_NAME}
-env_variable_value = ${ENV_VARIABLE_VALUE}
+deployment_name = "${DEPLOYMENT_NAME}"
+replica_count = "${REPLICA_COUNT}"
+app_name = "${APP_NAME}"
+container_name = "${CONTAINER_NAME}"
+docker_image = "${DOCKER_IMAGE}"
+image_tag = "${IMAGE_TAG}"
+container_port =  "${CONTAINER_PORT}"
+env_variable_name = "${ENV_VARIABLE_NAME}"
+env_variable_value = "${ENV_VARIABLE_VALUE}"
 
 # Render the template with variables
 rendered_template = template.render(
