@@ -9,6 +9,7 @@ template_env = jinja2.Environment(loader=template_loader)
 template = template_env.get_template(template_file)
 
 # Define variables from Jenkins environment
+deployment_name = "${DEPLOYMENT_NAME}"
 docker_image = "nginx"
 env_variable = "Version"
 env_value = "1.0"
