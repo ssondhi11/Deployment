@@ -12,17 +12,17 @@ template = template_env.get_template(template_file)
 
 # Render the template with variables
 rendered_template = template.render(
-    DEPLOYMENT_NAME,
-    REPLICA_COUNT,
-    APP_NAME,
-    CONTAINER_NAME,
-    DOCKER_IMAGE,
-    IMAGE_TAG,
-    CONTAINER_PORT,
-    CPU_LIMIT,
-    MEMORY_LIMIT,
-    ENV_VARIABLE_NAME,
-    ENV_VARIABLE_VALUE,
+    deployment_name=deployment_name,
+    replica_count=replica_count,
+    app_name=app_name,
+    container_name=container_name,
+    docker_image=docker_image,
+    image_tag=image_tag,
+    container_port=container_port,
+    cpu_limit=cpu_limit,
+    memory_limit=memory_limit,
+    env_variable_name=env_variable_name,
+    env_variable_value=env_variable_value,
 )
 
 # Write the rendered template to deployment.yaml
