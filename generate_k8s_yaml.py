@@ -16,6 +16,7 @@ cpu_limit = "${CPU_LIMIT}"
 memory_limit = "${MEMORY_LIMIT}"
 replicas = "${REPLICAS}"
 docker_args = "${DOCKER_ARGS}"
+container_name = "${CONTAINER_NAME}"
 container_port = "${CONTAINER_PORT}"
 pvc_volume = "${PVC_VOLUME}"
 
@@ -27,6 +28,7 @@ rendered_template = template.render(
     MEMORY_LIMIT=memory_limit,
     REPLICAS=replicas,
     DOCKER_ARGS=docker_args,
+    CONTAINER_NAME=container_name,
     CONTAINER_PORT=container_port,
     PVC_VOLUME=pvc_volume,
 )
