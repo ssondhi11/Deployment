@@ -2,14 +2,15 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'your-docker-image:latest'
-        ENV_VARIABLE = 'your-environment-variable'
+        DOCKER_IMAGE = 'nginx:latest'
+        ENV_VARIABLE = 'Version'
+        ENV_VALUE = '1.0'
         CPU_LIMIT = '0.5'
         MEMORY_LIMIT = '256Mi'
         REPLICAS = '3'
-        DOCKER_ARGS = '--your-docker-args'
+        DOCKER_ARGS = 'app_version'
         PORT_NUMBER = '80'
-        PVC_VOLUME = 'your-pvc-volume'
+        PVC_VOLUME = '1Gi'
     }
 
     stages {
