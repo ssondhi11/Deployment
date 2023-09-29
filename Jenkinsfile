@@ -27,7 +27,7 @@ pipeline {
                     def container_port =  params.CONTAINER_PORT
                     def env_variable_name = params.ENV_VARIABLE_NAME
                     def env_variable_value = params.ENV_VARIABLE_VALUE
-                    bat "python generate_k8s_yaml.py --deployment-name ${deployment_name} --replica-count ${replica_count} --app-name ${app_name} --container-name ${container_name} --docker-image ${docker_image} --image-tag ${image_tag} --container-port ${container_port} --env_variable-name ${env_variable_name} --env_variable-value ${env_variable_value}" 
+                    bat "python generate_k8s_yaml.py --deployment_name ${deployment_name} --replica_count ${replica_count} --app-name ${app_name} --container_name ${container_name} --docker_image ${docker_image} --image_tag ${image_tag} --container_port ${container_port} --env_variable_name ${env_variable_name} --env_variable_value ${env_variable_value}" 
                 }
             }
         }
