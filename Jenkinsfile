@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     // Use Jinja or any templating engine to generate Kubernetes YAML
-                    sh 'python generate_k8s_yaml.py'
+                    bat 'python generate_k8s_yaml.py'
                 }
             }
         }
@@ -27,7 +27,7 @@ pipeline {
             steps {
                 script {
                     // Apply the generated YAML files to your Kubernetes cluster
-                    sh 'kubectl apply -f k8s-deployment.yaml -f k8s-service.yaml'
+                    bat 'kubectl apply -f k8s-deployment.yaml -f k8s-service.yaml'
                 }
             }
         }
