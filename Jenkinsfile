@@ -19,7 +19,7 @@ pipeline {
                 script {
                     // Use Jinja or any templating engine to generate Kubernetes YAML
                     def deployment_name = params.DEPLOYMENT_NAME
-                    bat "python generate_k8s_yaml.py --deployment-name $(deployment_name)"
+                    bat "python generate_k8s_yaml.py --deployment-name ${deployment_name}"
                 }
             }
         }
