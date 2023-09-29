@@ -16,6 +16,8 @@ container_name = "${CONTAINER_NAME}"
 docker_image = "${DOCKER_IMAGE}"
 image_tag = "${IMAGE_TAG}"
 container_port =  "${CONTAINER_PORT}"
+cpu_limit = "${CPU_LIMIT}"
+memory_limit = "${MEMORY_LIMIT}"
 env_variable_name = "${ENV_VARIABLE_NAME}"
 env_variable_value = "${ENV_VARIABLE_VALUE}"
 
