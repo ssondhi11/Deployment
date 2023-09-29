@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-        tring(name: 'DEPLOYMENT_NAME', description: 'Deployment Name')
+        string(name: 'DEPLOYMENT_NAME', description: 'Deployment Name')
         string(name: 'REPLICA_COUNT', description: 'Number of Replicas')
         string(name: 'APP_NAME', description: 'Application Name')
         string(name: 'CONTAINER_NAME', description: 'Container Name')
