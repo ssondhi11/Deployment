@@ -9,7 +9,7 @@ pipeline {
         MEMORY_LIMIT = '256Mi'
         REPLICAS = '3'
         DOCKER_ARGS = 'app_version'
-        PORT_NUMBER = '80'
+        CONTAINER_PORT = '80'
         PVC_VOLUME = '1Gi'
     }
 
