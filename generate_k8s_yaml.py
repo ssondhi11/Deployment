@@ -13,16 +13,16 @@ template = template_env.get_template(template_file)
 
 # Render the template with variables
 rendered_template = template.render(
-    DEPLOYMENT_NAME=deployment-name,
-    IMAGE_TAG=image-tag,
-    DOCKER_IMAGE=docker-image,
-    ENV_VARIABLE_NAME=env_variable-name,
-    CPU_LIMIT=cpu-limit,
-    MEMORY_LIMIT=memory-limit,
-    REPLICAS=replica-count,
+    DEPLOYMENT_NAME=deployment_name,
+    IMAGE_TAG=image_tag,
+    DOCKER_IMAGE=docker_image,
+    ENV_VARIABLE_NAME=env_variable_name,
+    CPU_LIMIT=cpu_limit,
+    MEMORY_LIMIT=memory_limit,
+    REPLICAS=replica_count,
     DOCKER_ARGS=docker_args,
-    CONTAINER_NAME=container-name,
-    CONTAINER_PORT=container-port,
+    CONTAINER_NAME=container_name,
+    CONTAINER_PORT=container_port,
     PVC_VOLUME=pvc_volume,
 )
 
