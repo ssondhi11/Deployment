@@ -23,7 +23,7 @@ pvc_volume = "1Gi"
 
 # Render the template with variables
 rendered_template = template.render(
-    DEPLOYMENT_NAME=deployment_name
+    DEPLOYMENT_NAME=deployment_name,
     DOCKER_IMAGE=docker_image,
     ENV_VARIABLE=env_variable,
     CPU_LIMIT=cpu_limit,
