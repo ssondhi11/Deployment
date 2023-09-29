@@ -22,14 +22,5 @@ pipeline {
                 }
             }
         }
-
-        stage('Apply Kubernetes Manifests') {
-            steps {
-                script {
-                    // Apply the generated YAML files to your Kubernetes cluster
-                    bat 'kubectl apply -f k8s-deployment.yaml -f k8s-service.yaml'
-                }
-            }
-        }
     }
 }
