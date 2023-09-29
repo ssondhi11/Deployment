@@ -42,16 +42,16 @@ env_variable_value = args[args.index("--env_variable_value") + 1]
 # Render the template with variables
 rendered_template = template.render(
     DEPLOYMENT_NAME=deployment_name,
-    IMAGE_TAG=image_tag,
+    REPLICAS=replica_count,
+    APP_NAME=app_name,
+    CONTAINER_NAME=container_name,
     DOCKER_IMAGE=docker_image,
-    ENV_VARIABLE_NAME=env_variable_name,
+    IMAGE_TAG=image_tag,
+    CONTAINER_PORT=container_port,
     CPU_LIMIT=cpu_limit,
     MEMORY_LIMIT=memory_limit,
-    REPLICAS=replica_count,
-    DOCKER_ARGS=docker_args,
-    CONTAINER_NAME=container_name,
-    CONTAINER_PORT=container_port,
-    PVC_VOLUME=pvc_volume,
+    ENV_VARIABLE_NAME=env_variable_name,
+    ENV_VARIABLE_VALUE=env_variable_value,
 )
 
 # Write the rendered template to deployment.yaml
