@@ -27,6 +27,8 @@ pipeline {
                     def docker_image = params.DOCKER_IMAGE
                     def image_tag = params.IMAGE_TAG
                     def container_port =  params.CONTAINER_PORT
+                    def cpu_limit = params.CPU_LIMIT
+                    def memory_limit = params.MEMOTY_LIMIT
                     def env_variable_name = params.ENV_VARIABLE_NAME
                     def env_variable_value = params.ENV_VARIABLE_VALUE
                     bat "python generate_k8s_yaml.py --deployment_name ${deployment_name} --replica_count ${replica_count} --app-name ${app_name} --container_name ${container_name} --docker_image ${docker_image} --image_tag ${image_tag} --container_port ${container_port} --cpu_limit ${cpu_limit} --memory_limit ${memory_limit} --env_variable_name ${env_variable_name} --env_variable_value ${env_variable_value}" 
