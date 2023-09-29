@@ -9,16 +9,16 @@ template_env = jinja2.Environment(loader=template_loader)
 template = template_env.get_template(template_file)
 
 # Define variables from Jenkins environment
-docker_image = "${DOCKER_IMAGE}"
-env_variable = "${ENV_VARIABLE}"
-env_value = "${ENV_VALUE}"
-cpu_limit = "${CPU_LIMIT}"
-memory_limit = "${MEMORY_LIMIT}"
-replicas = "${REPLICAS}"
-docker_args = "${DOCKER_ARGS}"
-container_name = "${CONTAINER_NAME}"
-container_port = "${CONTAINER_PORT}"
-pvc_volume = "${PVC_VOLUME}"
+docker_image = "nginx"
+env_variable = "version"
+env_value = "1.0"
+cpu_limit = "0.5"
+memory_limit = "256"
+replicas = "3"
+docker_args = "app_version"
+container_name = "nginx"
+container_port = "80"
+pvc_volume = "1Gi"
 
 # Render the template with variables
 rendered_template = template.render(
