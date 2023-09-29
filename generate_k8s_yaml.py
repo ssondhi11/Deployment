@@ -10,13 +10,13 @@ template = template_env.get_template(template_file)
 
 # Define variables from Jenkins environment
 docker_image = "nginx"
-env_variable = "version"
+env_variable = "Version"
 env_value = "1.0"
 cpu_limit = "0.5"
 memory_limit = "256Mi"
 replicas = "3"
 docker_args = "app_version"
-container_name = "nginx"
+container_name = "nginx:latest"
 container_port = "80"
 pvc_volume = "1Gi"
 
