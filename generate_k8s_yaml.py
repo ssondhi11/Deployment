@@ -31,7 +31,7 @@ rendered_template = template.render(
     CPU_LIMIT=cpu_limit,
     MEMORY_LIMIT=memory_limit,
     ENV_VARIABLE_NAME=env_variable_name,
-    ENV_VARIABLE_VALUE={env_variable_value,
+    ENV_VARIABLE_VALUE=env_variable_value,
 )
 
 # Write the rendered template to deployment.yaml
