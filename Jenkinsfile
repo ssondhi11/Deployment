@@ -2,15 +2,15 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'DEPLOYMENT_NAME', description: 'Deployment Name')
-        string(name: 'REPLICA_COUNT', description: 'Number of Replicas')
-        string(name: 'APP_NAME', description: 'Application Name')
-        string(name: 'CONTAINER_NAME', description: 'Container Name')
-        string(name: 'IMAGE_NAME', description: 'Container Image Name')
-        string(name: 'IMAGE_TAG', description: 'Container Image Tag')
-        string(name: 'CONTAINER_PORT', description: 'Container Port')
-        string(name: 'ENV_VARIABLE_NAME', description: 'Environment Variable Name')
-        string(name: 'ENV_VARIABLE_VALUE', description: 'Environment Variable Value')
+        string(name: 'DEPLOYMENT_NAME', defaultValue: 'nginx-deployment', description: 'Deployment Name')
+        string(name: 'REPLICA_COUNT', defaultValue: '3', description: 'Number of Replicas')
+        string(name: 'APP_NAME', defaultValue: 'web', description: 'Application Name')
+        string(name: 'CONTAINER_NAME', defaultValue: 'nginx', description: 'Container Name')
+        string(name: 'IMAGE_NAME', defaultValue: 'nginx', description: 'Container Image Name')
+        string(name: 'IMAGE_TAG', defaultValue: 'latest', description: 'Container Image Tag')
+        string(name: 'CONTAINER_PORT', defaultValue: '80', description: 'Container Port')
+        string(name: 'ENV_VARIABLE_NAME', defaultValue: 'version', description: 'Environment Variable Name')
+        string(name: 'ENV_VARIABLE_VALUE', defaultValue: '1.0', description: 'Environment Variable Value')
     }
 
     stages {
